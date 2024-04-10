@@ -26,26 +26,28 @@ const MyBookingComp = () => {
             <NavComp />
             <div className='row mx-auto'>
                 <div className='col-md-8 mx-auto'>
-                    {msg}
-                    {booking.map((details, index) => (
-                        <div key={index} className='card  p-3 deail'>
-                            <div className='row '>
-                                <h3 className='heading'><span>Booking On : {details.bookingDate}</span></h3>
-                                <div className='col-md-6 part'>
-                                    <h5>Customer Name : {details.customerName}</h5>
-                                    <h5>Number of Tickets : {details.numberOfTicket}</h5>
-                                    <h5>Journey Date : {details.date}</h5>
-                                </div>
-                                <div className='col-md-6 part'>
-                                    <h5>Customer Email : {details.customerEmail}</h5>
-                                    <h5>Total Price : {details.totalprice}</h5>
-                                    <h5>Status : {details.bookingStatus}</h5>
-                                    <button className='flightdetails' onClick={() => { handleclick(details.flightid) }}>Flight Details</button>
+                    {booking.length === 0 ? (
+                        <h1 style={{ height: '87vh',display:"flex" ,justifyContent:"center",alignItems:"center"}}>{msg}</h1>
+                    ) : (
+                        booking.map((details) => (
+                            <div key={details.flightid} className='card p-3 deail'>
+                                <div className='row'>
+                                    <h3 className='heading'><span>Booking On : {details.bookingDate}</span></h3>
+                                    <div className='col-md-6 part'>
+                                        <h5>Customer Name : {details.customerName}</h5>
+                                        <h5>Number of Tickets : {details.numberOfTicket}</h5>
+                                        <h5>Journey Date : {details.date}</h5>
+                                    </div>
+                                    <div className='col-md-6 part'>
+                                        <h5>Customer Email : {details.customerEmail}</h5>
+                                        <h5>Total Price : {details.totalprice}</h5>
+                                        <h5>Status : {details.bookingStatus}</h5>
+                                        <button className='flightdetails' onClick={() => handleclick(details.flightid)}>Flight Details</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))
-                    }
+                        ))
+                    )}
                 </div>
             </div>
             
