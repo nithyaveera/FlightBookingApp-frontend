@@ -1,0 +1,47 @@
+.f-page{
+    height: 100vh;
+    position: relative;
+}
+.f-page img{
+    height: 100%;
+    width: 100%;
+}
+.homecontent{
+     padding-left: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0%;
+}
+.f-page h1{
+     font-family: "Oswald", sans-serif;
+     letter-spacing: 2px;
+     text-shadow: 0 0 2px rgba(255, 255, 255, 0.425), 0 0 4px rgba(255, 255, 255, 0.425), 0 0 8px rgba(255, 255, 255, 0.425), 0 0 32px rgba(0, 255, 255, 0.425), 0 0 64px rgba(0, 255, 255, 0.425), 0 0 90px rgba(0, 255, 255, 0.425);
+    font-weight: bold;
+    font-size:xx-large;
+    
+}
+.start-btn{
+    color: #fff;
+   font-family: "Oswald", sans-serif;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.425), 0 0 4px rgba(255, 255, 255, 0.425), 0 0 8px rgba(255, 255, 255, 0.425), 0 0 32px rgba(0, 255, 255, 0.425), 0 0 64px rgba(0, 255, 255, 0.425), 0 0 90px rgba(0, 255, 255, 0.425); letter-spacing: 2px;
+    font-weight: bold;
+    font-size: x-large;
+    background:black;
+    padding: 10px 25px;
+    border-radius: 20px;
+    
+}
+.content h5{
+text-shadow: 0 0 2px rgba(255, 255, 255, 0.425), 0 0 4px rgba(255, 255, 255, 0.425), 0 0 8px rgba(255, 255, 255, 0.425), 0 0 32px rgba(0, 255, 255, 0.425), 0 0 64px rgba(0, 255, 255, 0.425), 0 0 90px rgba(0, 255, 255, 0.425); letter-spacing: 2px;
+    width: 40%;
+    margin: 20px 1px;
+    font-weight: 900;
+}
+@media screen and (min-width: 500px){
+ .logo{
+      font-size: 50px !important;
+ }   
+}

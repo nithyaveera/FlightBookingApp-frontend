@@ -1,0 +1,30 @@
+.mybook{
+    background-color: #92e0ed;
+}
+.deail{
+   background-color:#7acc46; 
+   color: white;
+   margin-top: 3vh;
+   box-shadow: 1px 1px 9px black;
+}
+.heading span{
+    border-bottom: 3px solid wheat;
+    padding:4px;
+}
+.row .part{
+    padding: 10px 20px;
+    .flightdetails{
+        padding:5px 18px;
+        margin-top: 6px;
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        font-weight: 700;
+        border: none;
+    }
+}
+@media screen and (max-width: 500px) {
+    .deail .row .col-md-6 h5{
+        font-size: medium;
+    }
+}

@@ -1,0 +1,26 @@
+.searchresult {
+  background-color: #99c735;
+}
+.price span {
+  display: block;
+  font-size: small;
+}
+.name span {
+  display: block;
+  font-size: medium;
+}
+.duration h4 {
+  border-bottom: 4px solid aqua;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .ico {
+    display: none;
+  }
+  .name span{
+    font-size: x-small;
+  }
+  .duration h6{
+    display: none;
+  }
+}

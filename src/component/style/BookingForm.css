@@ -1,0 +1,31 @@
+.booking-box{
+    background-color:#99c735;
+    padding:"60px"
+}
+.bottom{
+    border-top: 2px white solid;
+    h4{
+        font-weight: 700;
+    }
+    button{
+        font-size: large;
+    }
+}
+.input-group button{
+  background-color: white;
+}
+.input-group input{
+    padding: 0px 5px;
+    font-weight: 700;
+    border: none;
+}
+.price{
+    font-weight: 700;
+}
+
+@media screen and (max-width: 500px){
+    .bottom{
+        margin-top: 10px;
+        padding-top: 30px;
+    }
+}

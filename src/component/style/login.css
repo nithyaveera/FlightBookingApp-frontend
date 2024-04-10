@@ -1,0 +1,34 @@
+.imgg {
+  font-family: Anton;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  background-image: url(https://img.freepik.com/free-photo/low-angle-shot-airplane-flying-closer-daytime_181624-41347.jpg?w=740&t=st=1711527630~exp=1711528230~hmac=135b325d09d8e6792651f0bd3a25ae062dfe9d3c7e9177247499341c9179c2a6);
+}
+.main {
+  box-shadow: 1px 1px 19px black;
+}
+.page{
+    font-family: Rakkas;
+    background-color: white;
+}
+.bx{
+  height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

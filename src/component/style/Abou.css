@@ -1,0 +1,29 @@
+#about{
+    padding: 10vh;
+}
+.aboutspan1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.aboutspan1 h1{
+    font-size: 30px;
+}
+.aboutspan1  h3{
+    color: orange;
+}
+.aboutspan1 p{
+    text-align: center;
+    letter-spacing: 1px;
+}
+.image{
+    width: 60%;
+}
+
+@media screen and (min-width: 500px){
+    .aboutspan1 h1{
+    padding: 25px 0px;
+    font-size: 60px;
+}
+}

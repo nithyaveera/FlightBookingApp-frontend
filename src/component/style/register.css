@@ -1,0 +1,37 @@
+.img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: url(https://img.freepik.com/free-photo/low-angle-shot-airplane-flying-closer-daytime_181624-41347.jpg?w=740&t=st=1711527630~exp=1711528230~hmac=135b325d09d8e6792651f0bd3a25ae062dfe9d3c7e9177247499341c9179c2a6);
+}
+.bg-dark{
+  height: 100%;
+  width: 100%;
+}
+.con {
+  box-shadow: 1px 1px 19px black;
+  
+}
+.form-control{
+    border: none;
+    background: none;
+    background-color: gainsboro;
+}
+.form-label{
+    font-size:medium;
+    font-weight: 650;
+}
+.sub {
+  display: flex;
+  justify-content: center;
+}
+.btn{
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 5px 10px ;
+}
+.role{
+  padding-right:10px ;
+}
