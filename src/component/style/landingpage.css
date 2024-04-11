@@ -30,9 +30,9 @@
     font-weight: bold;
     font-size: x-large;
     background:black;
-    padding: 10px 25px;
+    padding: 8px 18px;
     border-radius: 20px;
-    
+    margin-right:10px;
 }
 .content h5{
 text-shadow: 0 0 2px rgba(255, 255, 255, 0.425), 0 0 4px rgba(255, 255, 255, 0.425), 0 0 8px rgba(255, 255, 255, 0.425), 0 0 32px rgba(0, 255, 255, 0.425), 0 0 64px rgba(0, 255, 255, 0.425), 0 0 90px rgba(0, 255, 255, 0.425); letter-spacing: 2px;

@@ -4,8 +4,11 @@ import { useNavigate } from 'react-router-dom';
 
 const LandingComp = () => {
     const navigate = useNavigate()
-    const handleclick = () => {
+    const handleSignin = () => {
         navigate('/login')
+    }
+    const handleSignup = () => {
+        navigate('/register')
     }
     return (
         <div className='f-page'>
@@ -16,7 +19,8 @@ const LandingComp = () => {
                     </div>
                 <div className='content '>
                     <h5>India's laegest low-cost carrier with 2000+ daily flights to 100+ desinations, is at your service</h5>
-                    <button className='start-btn mt-5 navbar-brand' onClick={handleclick}>Get Start!</button>
+                    <button className='start-btn mt-5 navbar-brand' onClick={handleSignin}>Sign In</button>
+                    <button className='start-btn mt-5 navbar-brand' onClick={handleSignup}>Sign Up</button>
                 </div>
             </div>
         </div>
