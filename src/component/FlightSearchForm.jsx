@@ -36,7 +36,7 @@ const FlightSearchForm = () => {
 
     return (
         <div>
-            <form className='row  p-md-5 search-form' onSubmit={handleSubmit}>
+            <form className='row  p-lg-5 pb-2  search-form' onSubmit={handleSubmit}>
                 <h2 className='text-center' style={{ fontFamily: "Rakkas" }}>Let's Start</h2>
                 <div className='col'>
                     <div className='row'>

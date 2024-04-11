@@ -22,22 +22,23 @@ const NavComp = () => {
     }
     return (
         <div>
-            <nav className='home nav'>
+            <nav className='home nav navbar navbar-expand-lg'>
                 <h1 class="logotext"><span>Sky</span>Flights <i class="fa-solid fa-plane"></i></h1>
-                <input class="inputnav" type="checkbox" id="abc" />
-                <label for="abc" class="hiddenlable">
-                    <i class="fa-solid fa-bars"></i>
-                </label>
-                <span class="submenunav">
-                    <Link to='/home'>Home</Link>
-                    <Link to='/mybooking' onClick={handledetails}>My Booking</Link>
-                    <Link to='/about'>About</Link>
-                    <Link to='/contact'>Contact Us</Link>
-
-                </span>
-                <span class="submenulogout ">
-                    <button onClick={handleclick}>LogOut</button>
-                </span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <span class="navbar-nav me-auto mb-2 mb-lg-0 menus">
+                            <Link to='/home'>Home</Link>
+                            <Link to='/mybooking' onClick={handledetails}>My Booking</Link>
+                            <Link to='/about'>About</Link>
+                            <Link to='/contact'>Contact Us</Link>
+                    </span>
+                    <span className='out'>
+                        <button onClick={handleclick}>LogOut</button>
+                    </span>
+                </div>
+                
             </nav>
         </div>
     );
