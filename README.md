@@ -8,7 +8,6 @@ This repository contains the frontend code for a Flight Booking Application deve
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Features](#features)
-  - [Setup](#setup)
   - [Dependencies](#dependencies)
   - [Usage](#usage)
 
@@ -24,32 +23,6 @@ This frontend provides a user interface to interact with the flight booking appl
 - About and contact pages
 - View booking history
 - View flight details
-
-## Setup
-
-1. Clone the repository:
-
-    ```bash
-    git clone <repository_url>
-    ```
-
-2. Navigate to the frontend directory:
-
-    ```bash
-    cd frontend
-    ```
-
-3. Install dependencies:
-
-    ```bash
-    npm install
-    ```
-
-4. Start the development server:
-
-    ```bash
-    npm start
-    ```
 
 ## Dependencies
 
