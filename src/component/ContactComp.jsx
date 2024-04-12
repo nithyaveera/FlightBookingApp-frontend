@@ -7,9 +7,9 @@ const ContactComp = () => {
     return (
         <div>
             <NavComp /> 
-        <div className='footermaindiv'>
+        <div className='footermaindiv pb-md-3'>
             <h1>CONTACT US</h1>
-            <div class="footerdiv1 p-4">
+            <div class="footerdiv1 p-4 pb-md-5">
                 <div class="ourcompanydiv">
                     <h3>OUR COMPANY</h3>
                     <p> <i class="fa-solid fa-plane"></i>SkyFlights</p>
