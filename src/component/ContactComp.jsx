@@ -1,12 +1,13 @@
 import React from 'react';
 import './style/Contact.css'
 import NavComp from './NavComp';
+import './style/Navcomp.css'
 
 const ContactComp = () => {
     return (
-        <div className='row footermaindiv'>
-            <NavComp />
-            
+        <div>
+            <NavComp /> 
+        <div className='footermaindiv '>
             <h1>CONTACT US</h1>
             <div class="footerdiv1 p-4">
                 <div class="ourcompanydiv">
@@ -48,6 +49,7 @@ const ContactComp = () => {
                         Sat 10:00am–4:00pm<br/>
                         Sun Closed</p>
                 </div>
+            </div>
             </div>
         </div>
     );
