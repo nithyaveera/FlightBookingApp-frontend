@@ -8,7 +8,7 @@ import { myContext } from '../App';
 
 
 const HomeComp = () => {
-    const{baseurl,setFlights}=useContext(myContext)
+    const{baseurl,setFlights,token}=useContext(myContext)
     return (
         <div >
             <NavComp className='home-container' />
