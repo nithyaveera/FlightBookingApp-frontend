@@ -7,7 +7,7 @@ const ContactComp = () => {
     return (
         <div>
             <NavComp /> 
-        <div className='footermaindiv '>
+        <div className='footermaindiv'>
             <h1>CONTACT US</h1>
             <div class="footerdiv1 p-4">
                 <div class="ourcompanydiv">

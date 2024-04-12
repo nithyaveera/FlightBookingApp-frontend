@@ -47,8 +47,7 @@ const HomeComp = () => {
 
 
                 </div>
-                <div className='row footermaindiv'>
-
+                <div className='footermaindiv'>
                     <h1>CONTACT US</h1>
                     <div class="footerdiv1">
                         <div class="ourcompanydiv">
