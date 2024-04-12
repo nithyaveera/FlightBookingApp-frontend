@@ -9,8 +9,6 @@ This repository contains the frontend code for a Flight Booking Application deve
   - [Overview](#overview)
   - [Features](#features)
   - [Setup](#setup)
-  - [Folder Structure](#folder-structure)
-    - [The frontend project follows this structure:](#the-frontend-project-follows-this-structure)
   - [Dependencies](#dependencies)
   - [Usage](#usage)
 
@@ -53,38 +51,6 @@ This frontend provides a user interface to interact with the flight booking appl
     npm start
     ```
 
-## Folder Structure
-
-### The frontend project follows this structure:
-
-frontend/
-│
-├── public/
-│   ├── index.html
-│   └── ...
-│
-└── src/
-    ├── components/
-    │   ├── HomeComp.js
-    │   ├── LandingComp.jsx
-    │   ├── ForgotComp.jsx
-    │   ├── FlightSearchResult.jsx
-    │   ├── BookingForm.jsx
-    │   ├── AboutComp.jsx
-    │   ├── ContactComp.jsx
-    │   ├── MyBookingComp.jsx
-    │   ├── FlightDetails.jsx
-    │   ├── Benefit.jsx
-    │   ├── FlightSearchForm.jsx
-    │   ├── Login.jsx
-    │   ├── NavComp.jsx
-    │   └── RegiserComp.jsx
-    ├── context/
-    │   └── myContext.js
-    ├── App.js
-    ├── index.js
-    └── ...
-
 ## Dependencies
 
 - React: JavaScript library for building user interfaces.
@@ -97,5 +63,5 @@ frontend/
 2. Log in with your credentials to access the application.
 3. Use the search functionality to find available flights.
 4. Book a flight by providing the necessary details in the booking form.
-5. View your booking details in the user dashboard Mybooking.
+5. View your booking details in the user dashboard M.
 6. Navigate to the about and contact pages for more information.
