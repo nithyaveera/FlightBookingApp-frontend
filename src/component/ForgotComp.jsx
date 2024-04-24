@@ -51,10 +51,8 @@ const ForgotComp = () => {
                                             <div className="col-12 pt-4 pb-1">
                                                 <label className="form-label">New Password <i class="fas fa-lock"></i></label>
                                                 <input type="password" className="form-control mt-3" name='password' value={formik.values.password} onChange={formik.handleChange} placeholder='*****' />                               </div>
-                                            <div className='text-danger'>{formik.errors.password}</div>
-                                            
+                                            <div className='text-danger'>{formik.errors.password}</div>                                        
                                         </div>
-
                                         <div className='row'>
                                             <div className="col-12 pt-4 sub">
                                                 <button type="submit" className="btn bg-primary text-white">Reset Password</button>

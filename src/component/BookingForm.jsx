@@ -7,11 +7,12 @@ import './style/BookingForm.css';
 import './style/Navcomp.css'
 
 const BookingForm = () => {
-    const { flightid, date, useremail, baseurl,token } = useContext(myContext)
+    const { flightid, date, useremail, baseurl,token,setdate } = useContext(myContext)
     const [price, setprice] = useState('')
     const [name,setname]=useState('')
     const [numberoficket, setnumberoficket] = useState(1)
-    const [msg,setmsg]=useState('')
+    const [msg, setmsg] = useState('')
+    const [errormsg,seterrormsg] =useState('')
     const navigate = useNavigate()
     useEffect(() => {
         fetchdata()
@@ -20,7 +21,7 @@ const BookingForm = () => {
     const fetchdata = async () => {
         await axios.get(`${baseurl}/flight/getflight/${flightid}`)
             .then(res => setprice(res.data.data))
-            .catch((err) => console.log(err))
+            .catch((err) => seterrormsg(err.response.data.message))
         if (!flightid) {
             navigate('/FlightSearchResult')
         }
@@ -55,6 +56,7 @@ const BookingForm = () => {
             setmsg(response.data.message)
             alert(`Booking Confirmed !`)
             navigate('/home')
+            setdate('')
         } catch (error) {
             alert('Error')
         }
@@ -63,25 +65,25 @@ const BookingForm = () => {
         <div>
             <NavComp />
             {msg}
-            
+            {errormsg}
             <form className='row  p-md-2 m-md-2' onSubmit={handlesubmit}>
                 <div className='col-md-5 mx-auto p-5 booking-box'>
-                    <h2 className='text-center' style={{ fontFamily: "Rakkas" }}>Booking Confirm</h2>
+                    <h2 className='text-center' style={{ fontFamily: "Rakkas" }}>Booking Confirmation <i class="fa-solid fa-circle-check"></i></h2>
                     <div className='row p-md-3'>
                         <div className="col-12 pt-2">
-                            <label className="form-label">Enter Your Name</label>
+                            <label className="form-label">Enter Your Name <i class="fa-solid fa-circle-user"></i></label>
                             <input type="text" className="form-control bg-white" name='name' value={name} onChange={(e)=>setname(e.target.value)} required />
                         </div>
                         <div className="col-12 pt-2">
-                            <label className="form-label">Email</label>
+                            <label className="form-label">Email <i class="fa-solid fa-envelope"></i></label>
                             <input type="text" className="form-control bg-white" name='name' value={useremail} readOnly />
                         </div>
                         </div>
                     <div className="row p-md-3">
-                            <div className="col-md-6 pt-4 sub">
+                            <div className="col-md-7 pt-4 sub">
                                 <div className='row'>
                                     <div className="col-6">
-                                        <label className="form-label">Passenger</label>
+                                    <label className="form-label">Passenger <i class="fa-solid fa-user-group"></i>   : </label>
                                     </div>
                                     <div className='col-md-6'>
                                         <div className="input-group shadow row">
@@ -109,9 +111,11 @@ const BookingForm = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='col-md-6 pt-4 sub'>
-                                <label className="form-label col-md-8">Price per Adult <span>:</span></label>
-                            <h5 className='col-md-4 price'>₹{price.pricePerSeat}</h5>
+                        <div className='col-md-5 pt-4 sub'>
+                            <div className='row'>
+                                <label className="form-label col-md-9">Price per Adult <span>:</span></label>
+                                <h5 className='col-md-3 price'>₹{price.pricePerSeat}</h5>
+                            </div>
                             </div>
                     </div>
                     <div className='row bottom mt-md-5 '>

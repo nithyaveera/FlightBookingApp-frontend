@@ -1,6 +1,8 @@
 .booking-box{
     background-color:#99c735;
-    padding:"60px"
+    padding:"60px";
+    border-radius: 20px;
+    box-shadow: 3px 6px 10px black;
 }
 .bottom{
     border-top: 2px white solid;

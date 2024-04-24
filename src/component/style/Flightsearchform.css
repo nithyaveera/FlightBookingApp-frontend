@@ -2,6 +2,8 @@
   background-color: #99c735;
   opacity: 0.9;
   color: white;
+  border-radius: 10px;
+  margin-top: 3vh;
 }
 
 .input {
@@ -14,4 +16,9 @@
   background-color: black;
   opacity: 0.9;
   padding: 7px;
+}
+@media screen and (min-width: 1400px){
+     .search-form{
+      margin-top: 8vh;
+     }
 }

@@ -12,6 +12,7 @@ import { myContext } from '../App';
 
 const RegiserComp = () => {
     let {baseurl}=useContext(myContext)
+    const [loading, setLoading] = useState(false)
     let navigate = useNavigate()
     let [user, setuser] = useState({
         name: '',
@@ -34,6 +35,7 @@ const RegiserComp = () => {
         initialValues: user,
         validationSchema: validaionschema,
         onSubmit: async (values, { resetForm }) => {
+            setLoading(true);
             await axios.post(`${baseurl}/api/register`, values)
                 .then(res => { toast.success(res.data.message); })
                 .catch(err => { toast.error(err.response.data.message); })
@@ -41,7 +43,7 @@ const RegiserComp = () => {
                 resetForm();
                 navigate('/login')
             }, 5000);
-
+            setLoading(false);
         }
     })
 
@@ -111,8 +113,13 @@ const RegiserComp = () => {
                                         </div>
                                         <div className='row'>
                                             <div className="col-12 pt-3 sub">
-                                                <button type="submit" className="btn bg-primary text-white">Register</button>
-                                            </div>
+                                                {loading ? (
+                                                    <div className="round-loader"></div>
+
+                                                ) : (
+                                                        <button type="submit" className="btn bg-primary text-white">Register</button>
+                                                )}
+                                         </div>
                                         </div>
                                         <div className='row'>
                                             <div className="col-12 pt-3">

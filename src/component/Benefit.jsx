@@ -2,7 +2,7 @@ import React from 'react';
 
 const Benefit = () => {
     return (
-        <div className='row  m-1' style={{boxShadow:'1px  1px 9px black' ,padding:'80px'}}>
+        <div className='row  m-1' style={{boxShadow:'1px  1px 9px black' ,padding:'70px'}}>
             <div className='col-md-3'>
                 <div className='row'>
                     <h1 className='col-md-3'><i class="fas fa-search " style={{ color: 'white', backgroundColor:'#99c735' ,padding:'10px' }}></i></h1>

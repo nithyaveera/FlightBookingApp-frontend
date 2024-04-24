@@ -1,0 +1,16 @@
+@media screen and (max-width: 500px){
+   .tel{
+    font-size:26px !important;
+   }
+   .para{
+    font-size: large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   }
+   .imag{
+    width: 80%;
+   }
+}
+.imag{
+    width: 90%;
+}

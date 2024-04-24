@@ -5,16 +5,22 @@ import './style/Abou.css'
 import FlightSearchForm from './FlightSearchForm';
 import Benefit from './Benefit';
 import { myContext } from '../App';
+import './style/contacthome.css'
+import { useNavigate } from 'react-router-dom';
 
 
 const HomeComp = () => {
-    const{baseurl,setFlights,token}=useContext(myContext)
+    const { baseurl, setFlights, token } = useContext(myContext)
+    let navigate = useNavigate()
+    const handleclick = () => {
+        navigate('/contact')
+    }
     return (
         <div >
             <NavComp className='home-container' />
             <div>
                 <div className='searchpart'>
-                    <div className='row  container mx-auto pt-4'>
+                    <div className='row  container mx-auto pt-4' >
                         <div className='col-md-8  descrip'>
                             <h1>The Sky is Waiting for You! </h1>
                             <h5>With SkyFlights, you can easily book any ticket you need to travel safely thanks to our detailed system of searching and booking airline tickets.</h5>
@@ -24,10 +30,10 @@ const HomeComp = () => {
                         </div>
                     </div>
                 </div>
-                <div className=''>
+                <div className='pt-2'>
                     <Benefit />
                 </div>
-                <div className='aboutpage'>
+                <div className='aboutpage' style={{ backgroundColor:"#e8eaeb"}}>
                     <section id="about">
                         <div className="aboutspan1">
                             <h3>Our History</h3>
@@ -44,8 +50,19 @@ const HomeComp = () => {
                         </div>
 
                     </section>
-
-
+                </div>
+                <div className='container-fluid' > 
+                    <div className='row' >
+                        <div className='col-md-5 p-5' style={{display:"flex",justifyContent:"space-around",alignItems:"center",flexDirection:"column"}}>
+                            <h3 className='text-primary'>24/7 Support</h3>
+                            <h1 style={{ color: "#1f2746",fontSize:"55px",fontWeight:"900"}} className='tel'>Tel. 1-800-1234-567</h1>
+                            <h4 className='para'>Our Support Service is available 24 hours a day, 7 days a week to help you buy your tickets.</h4>
+                            <button style={{ padding: "15px 20px", backgroundColor:"#FEC00D",border:"none",color:"white",fontWeight:"900"}} onClick={handleclick}>GET IN TOUCH</button>
+                        </div>
+                        <div className='col-md-7'>
+                            <img src="https://img.freepik.com/free-photo/smiling-woman-headset-presentation-something_329181-11710.jpg?w=740&t=st=1713886073~exp=1713886673~hmac=d2fd3bd26c6b4d240bee229034272e4764c46f8685c84e4cbfa00246d602c0ea" alt="" srcset="" className='imag'/>
+                        </div>
+                    </div>
                 </div>
                 <div className='footermaindiv'>
                     <h1>CONTACT US</h1>

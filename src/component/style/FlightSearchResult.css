@@ -4,6 +4,7 @@
 .price span {
   display: block;
   font-size: small;
+  font-weight: 800;
 }
 .name span {
   display: block;
@@ -18,9 +19,18 @@
     display: none;
   }
   .name span{
-    font-size: x-small;
+    font-size:x-small;
   }
   .duration h6{
     display: none;
+  }
+  .name h4{
+    font-size:large;
+  }
+  .butt{
+    margin-left: 30%;
+  }
+  .price{
+    padding-top: 2vh;
   }
 }

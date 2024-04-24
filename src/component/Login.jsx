@@ -10,7 +10,8 @@ import './style/login.css'
 import { myContext } from '../App';
 
 const Login = () => {
-    let { setoken, baseurl,setuseremail } = useContext(myContext)
+    let { setoken, baseurl, setuseremail } = useContext(myContext)
+    const [loading, setLoading] = useState(false)
     let [user, setuser] = useState({
         email: '',
         password: ''
@@ -25,6 +26,7 @@ const Login = () => {
         initialValues: user,
         validationSchema: validaionschema,
         onSubmit: async (values, { resetForm }) => {
+            setLoading(true);
             await axios.post(`${baseurl}/api/login`, values)
                 .then(res => {
                     toast.success(res.data.message);
@@ -37,7 +39,7 @@ const Login = () => {
 
             setuseremail(values.email);
             resetForm();
-            
+            setLoading(false);
         }
     })
     return (
@@ -73,7 +75,12 @@ const Login = () => {
 
                             <div className='row'>
                                 <div className="col-12 pt-4 sub">
-                                    <button type="submit" className="btn bg-primary text-white">Login</button>
+                                                {loading ? (
+                                                    <div className="round-loader"></div>
+                                                        
+                                                ) : (
+                                                    <button type="submit" className="btn bg-primary text-white">Login</button>
+                                                )}
                                 </div>
                             </div>
                             <div className='row'>

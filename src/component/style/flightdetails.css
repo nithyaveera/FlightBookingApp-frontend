@@ -5,10 +5,10 @@
 }
 
 .flightbox{
-    background-color: #03395f;
-    opacity: 0.9;
+    background-color: #99c735;
     color: white;
-    border-radius: 30px;
+    border-radius:50
+    px;
     margin-top: 8vh;
     box-shadow: 1px 1px 9px black;
 }

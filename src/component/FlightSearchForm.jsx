@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { myContext } from '../App';
 
 const FlightSearchForm = () => {
-    const { baseurl,token, setFlights, startCity, setstartCity, destination, setdestination, date, setdate, setFlightmsg } = useContext(myContext)
+    const {seterrormsg,baseurl,token, setFlights, startCity, setstartCity, destination, setdestination, date, setdate, setFlightmsg }=useContext(myContext)
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate()
     const cities = ['Chennai', 'Bangalore', 'Coimbatore', 'Cochin', 'Goa', 'Madurai'];
@@ -23,9 +23,10 @@ const FlightSearchForm = () => {
                 }
             });
             setFlights(response.data.data);
-            setFlightmsg(response.data.message)
+            setFlightmsg(response.data.info)
+            seterrormsg(response.data.message)
         } catch (err) {
-            console.error('Flight search error:', err);
+            seterrormsg(err.response.data.message)
         } finally {
             setLoading(false);
             navigate('/home/result')
@@ -37,7 +38,7 @@ const FlightSearchForm = () => {
     return (
         <div>
             <form className='row  p-lg-5 pb-2  search-form' onSubmit={handleSubmit}>
-                <h2 className='text-center' style={{ fontFamily: "Rakkas" }}>Let's Start</h2>
+                <h2 className='text-center' style={{ fontFamily: "Rakkas" }}>Let's Start!</h2>
                 <div className='col'>
                     <div className='row'>
                         <div className="col-12 pt-2">
@@ -62,7 +63,7 @@ const FlightSearchForm = () => {
                         </div>
                         <div className="col-12 pt-4 pb-1">
                             <label className="form-label"> Journey Date</label>
-                            <input type="date" value={date} onChange={(e) => setdate(e.target.value)} placeholder="Journey date" className="form-control input" required />
+                            <input type="date" value={date} onChange={(e) => setdate(e.target.value)} placeholder="Journey date" className="form-control input" min={new Date().toISOString().split('T')[0]}  required />
                         </div>
                     </div>
                     <div className='row'>

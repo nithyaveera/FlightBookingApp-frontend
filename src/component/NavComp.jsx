@@ -1,20 +1,25 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './style/Navcomp.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { myContext } from '../App';
 import axios from 'axios'
 
 const NavComp = () => {
-    const { setoken,setbookingdata, setmsg,baseurl,useremail }=useContext(myContext)
+    const { setoken, setbookingdata, baseurl, useremail, setmsg,setdate}=useContext(myContext)
     const navigate = useNavigate()
     const handleclick = () => {
         navigate('/login')
         setoken('')
+        setbookingdata('')
+        setdate('')
     }
     
     const handledetails = async () => {
         await axios.get(`${baseurl}/booking/bookeddetails/${useremail}`)
-            .then((res) => setbookingdata(res.data.data))
+            .then((res) => {
+                setbookingdata(res.data.data)
+                setmsg(res.data.msg)
+            })
             .catch((err) => setmsg(err.response.data.msg))
         if (!useremail) {
             navigate('/login')
