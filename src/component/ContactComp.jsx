@@ -10,10 +10,10 @@ import 'react-toastify/dist/ReactToastify.css';
 const ContactComp = () => {
     const {baseurl} =useContext(myContext)
     const [formData, setFormData] = useState({
-        from: '',
-        to: 'nithyaveeramani2003@gmail.com',
-        subject: '',
-        message: ''
+        fullname:"",
+        email:"",
+        phone:"",
+        message:""
     });
     const [loading, setLoading] = useState(false);
 
@@ -25,13 +25,13 @@ const ContactComp = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const response = await axios.post(`${baseurl}/mailer`, formData);
+            const response = await axios.post(`${baseurl}/mailer`,formData);
             toast.success(response.data.message)
             setFormData({
-                from: '',
-                to: 'nithyaveeramani2003@gmail.com',
-                subject: '',
-                message: ''
+                fullname: "",
+                email: "",
+                phone: "",
+                message: ""
             });
 
         } catch (error) {
@@ -43,25 +43,25 @@ const ContactComp = () => {
     return (
         <div>
             <NavComp />
-
         <div className='footermaindiv pb-md-3'>
             <h1>CONTACT US</h1>
                 <div class="footerdiv1 p-4 pb-md-5">
                     <div className='row'>
-                        <form className='col-md-3  p-lg-5 pb-2  search-form' onSubmit={handleSubmit} style={{ borderRadius: "10px" ,marginRight:"4vw",marginLeft:"2vw"}}>
+                        <form className='col-md-3  p-lg-4 p-2  search-form' onSubmit={handleSubmit} style={{ borderRadius: "10px" ,marginRight:"4vw",marginLeft:"2vw"}}>
                             <h2 className='text-center' style={{ fontFamily: "Rakkas" }}>Contact Us!</h2>
                             <div className='col'>
                                 <div className='row'>
-                                    <div className="col-12 pt-2">
-
-                                        <input type="email" name="from" placeholder="Your Email" className='form-control ' value={formData.from} onChange={handleChange} required/>
+                                    <div className="col-12 pt-3">
+                                        <input type="text" name="fullname" placeholder="Your Name" className='form-control input' value={formData.fullname} onChange={handleChange} required />
                                     </div>
-                                    <div className="col-12 pt-4 pb-1">
-
-                                        <input type="text" name="subject" placeholder="Subject" value={formData.subject} className='form-control' onChange={handleChange} required/>
+                                    <div className="col-12 pt-3">
+                                        <input type="email" name="email" placeholder="Your Email" className='form-control input' value={formData.email} onChange={handleChange} required/>
                                     </div>
-                                    <div className="col-12 pt-4 pb-1">
-                                        <input type='text' name="message" className="form-control p-3" placeholder="Leave a message here" value={formData.message} onChange={handleChange} required />
+                                    <div className="col-12 pt-3">
+                                        <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} className='form-control input' onChange={handleChange} required/>
+                                    </div>
+                                    <div className="col-12 pt-3 ">
+                                        <input type='text' name="message" className="form-control p-3 input" placeholder="Leave a message here" value={formData.message} onChange={handleChange} required/>
                                     </div>
                                 </div>
                                 <div className='row'>
@@ -72,7 +72,8 @@ const ContactComp = () => {
                                     </div>
                                 </div>
                             </div>
-                            <ToastContainer />
+                            <ToastContainer style={{marginTop:"10vh"}}/>
+
                         </form>
                 <div class="ourcompanydiv col-md-3">
                     <h3>OUR COMPANY</h3>
