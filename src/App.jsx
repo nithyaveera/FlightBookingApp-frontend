@@ -27,7 +27,7 @@ const App = () => {
   const [booking, setbookingdata] = useState([])
   const [msg, setmsg] = useState('')
   const [errormsg, seterrormsg] = useState("")
-  const baseurl = "https://flight-back-end-code.onrender.com"
+  const baseurl = "https://flightbookingapp-backend.onrender.com"
   return (
     <div> 
       <myContext.Provider value={{ errormsg, seterrormsg, flighdeta, setflightdeta,msg,setmsg,booking,setbookingdata,useremail,setuseremail,token, setoken, baseurl, flights, setFlights, startCity, setstartCity, destination, setdestination, date, setdate,flightmsg,setFlightmsg,flightid,setflightid }}>

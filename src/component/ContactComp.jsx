@@ -72,7 +72,7 @@ const ContactComp = () => {
                                     </div>
                                 </div>
                             </div>
-                            <ToastContainer style={{marginTop:"10vh"}}/>
+                            <ToastContainer style={{marginTop:"15vh"}}/>
 
                         </form>
                 <div class="ourcompanydiv col-md-3">
