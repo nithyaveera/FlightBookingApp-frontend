@@ -1,3 +1,17 @@
+.register-container::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  background-image: url(https://img.freepik.com/free-photo/jumbo-jet-flying-sky_23-2150895687.jpg?t=st=1719819235~exp=1719822835~hmac=269ce50953ff7fc37aad9f650f9937171c973be0f3376bc558d969d99afbbfb0&w=740);
+  filter: blur(30px);
+  background-repeat: repeat;
+  background-size: cover;
+  overflow-y: visible; 
+   z-index: -1; 
+} 
 .img {
   display: flex;
   flex-direction: column;
@@ -11,7 +25,7 @@
   width: 100%;
 }
 .con {
-  box-shadow: 1px 1px 19px black;
+  box-shadow: 1px 1px 19px 5px black;
   
 }
 .form-control{

@@ -11,18 +11,32 @@ const LandingComp = () => {
         navigate('/register')
     }
     return (
-        <div className='f-page'>
-            <img src="https://img.freepik.com/free-photo/jumbo-jet-flying-sky_23-2150895691.jpg?t=st=1711704111~exp=1711707711~hmac=6d4d8563c83e679ababafba4ba989f3fd8dfb3389a6177f4f9cfdf4bb4e6884f&w=740" className="smoke-effect" alt="" srcset="" />
-            <div className='homecontent'>
-                    <div className="container-fluid ">
-                        <h1 className='logo'>SkyFlights <i class="fa-solid fa-plane-up"></i></h1>
+        <div className='f-page '>  
+            <div className='p-md-5 p-2' >
+                <div className='row mt-md-5' >
+                    <div className='col-md-6 d-flex flex-column mt-5 '>
+                    <h1 className='logo'>SkyFlights <i class="fa-solid fa-plane-up"></i></h1>
+                    <div className='content mt-4'>
+                        <h3>India's laegest low-cost carrier with 2000+ daily flights to 100+ desinations, is at your service</h3>
+                            <div className='signbtns'>
+                                <button className='start-btn mt-md-5 p-md-3 p-1 mt-3' onClick={handleSignin}>Sign In</button>
+                                <button className='start-btn mt-md-5 p-md-3 p-1 mt-3' onClick={handleSignup}>Sign Up</button>
+                            </div>
+                            <div class="bubble-container">
+                                <div class="bubble"></div>
+                                <div class="bubble"></div>
+                                <div class="bubble"></div>
+                                <div class="bubble"></div>
+                                <div class="bubble"></div>
+                            </div>
                     </div>
-                <div className='content '>
-                    <h5>India's laegest low-cost carrier with 2000+ daily flights to 100+ desinations, is at your service</h5>
-                    <button className='start-btn mt-5 navbar-brand' onClick={handleSignin}>Sign In</button>
-                    <button className='start-btn mt-5 navbar-brand' onClick={handleSignup}>Sign Up</button>
+            </div>
+                    <div className='col-md-6  mt-5 pt-5 d-flex justify-content-center'>
+                        <img src="/flight.png" alt="" srcset="" />
+                </div>
                 </div>
             </div>
+        
         </div>
     );
 };

@@ -50,7 +50,8 @@ const FlightSearchResult = () => {
                                                 <h3>₹{flight.pricePerSeat}<span>per adult</span></h3>
                                             </div>
                                             <div className='col-md-2 '>
-                                                <button className='btn btn-primary mt-3 butt' onClick={() => { handleclick(flight._id) }}>BOOK</button>
+                                                <button className='btn btn-primary mt-3 butt
+                                                ' onClick={() => { handleclick(flight._id) }}>BOOK</button>
                                             </div>
                                         </div>
                                     </div>

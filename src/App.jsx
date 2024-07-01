@@ -45,7 +45,6 @@ const App = () => {
             <Route path='/mybooking' element={<MyBookingComp />} />
             <Route path='/flightdeta' element={<FlightDetails/>}/>
           </Routes>
-
         </BrowserRouter>
       </myContext.Provider>
       

@@ -48,7 +48,7 @@ const RegiserComp = () => {
     })
 
     return (
-        <div className='bg-dark'>
+        <div className='register-container'>
             <div className='container ' >
                 <div className='row pb-2 '>
                     <div className='col-md-10 mx-auto '>
@@ -60,7 +60,7 @@ const RegiserComp = () => {
                             </div>
                             <div className='col-md-6 page'>
                                 <form className='row  p-5 form' onSubmit={formik.handleSubmit}>
-                                    <h2 className='text-center'>Sign Up</h2>
+                                    <h2 className='text-center'>Sign Up <i className="fa-solid fa-user-lock"></i></h2>
                                     <div className='col'>
                                         <div className='row'>
                                             <div className="col-12 ">

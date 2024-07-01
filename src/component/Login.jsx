@@ -42,10 +42,10 @@ const Login = () => {
             setLoading(false);
         }
     })
-    return (
-        <div className='bg-dark'>
-        <div className='container' >
-            <div className='row bx'>
+    return ( 
+        <div className=' login-container'>
+        <div className='container ' >
+            <div className='row bx '>
                 <div className='col-md-9 mx-auto mt-md-4'>
             <div className='row main mt-md-5'>
                         <div className='col-md-6 imgg' >
@@ -55,7 +55,7 @@ const Login = () => {
                 </div>
                 <div className='col-md-6 page'>
                     <form className='row p-5 ' onSubmit={formik.handleSubmit}>
-                                <h2 className='text-center' style={{ fontFamily: "Rakkas"}}>Sign In</h2>
+                                    <h2 className='text-center' style={{ fontFamily: "Rakkas" }}>Sign In <i className="fa-solid fa-user-lock"></i></h2>
                         <div className='col'>
                             <div className='row'>
                                 <div className="col-12 pt-4">
