@@ -12,7 +12,6 @@ const FlightSearchResult = () => {
         setflightid(id)
     }
     return (
-
         <div>
             <NavComp />
             <div className='container searchresult p-md-4'>

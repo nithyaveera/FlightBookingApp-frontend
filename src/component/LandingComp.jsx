@@ -31,7 +31,7 @@ const LandingComp = () => {
                             </div>
                     </div>
             </div>
-                    <div className='col-md-6  mt-5 pt-5 d-flex justify-content-center'>
+                    <div className='col-md-5  mt-5 pt-5 d-flex justify-content-center'>
                         <img src="/flight.png" alt="" srcset="" />
                 </div>
                 </div>

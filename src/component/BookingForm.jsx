@@ -16,7 +16,7 @@ const BookingForm = () => {
     const navigate = useNavigate()
     useEffect(() => {
         fetchdata()
-    }, [])
+    },[])
 
     const fetchdata = async () => {
         await axios.get(`${baseurl}/flight/getflight/${flightid}`)

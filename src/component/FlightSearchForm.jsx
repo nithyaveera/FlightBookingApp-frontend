@@ -1,13 +1,13 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
-import './style/Flightsearchform.css'
+import './style/Flightsearchform.css';
 import { useNavigate } from 'react-router-dom';
 import { myContext } from '../App';
 
 const FlightSearchForm = () => {
     const {seterrormsg,baseurl,token, setFlights, startCity, setstartCity, destination, setdestination, date, setdate, setFlightmsg }=useContext(myContext)
     const [loading, setLoading] = useState(false);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const cities = ['Chennai', 'Bangalore', 'Coimbatore', 'Cochin', 'Goa', 'Madurai'];
     if (!token) {
         navigate('/login')

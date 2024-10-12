@@ -59,6 +59,7 @@ const ContactComp = () => {
                                     </div>
                                     <div className="col-12 pt-3">
                                         <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} className='form-control input' onChange={handleChange} required/>
+                     
                                     </div>
                                     <div className="col-12 pt-3 ">
                                         <input type='text' name="message" className="form-control p-3 input" placeholder="Leave a message here" value={formData.message} onChange={handleChange} required/>

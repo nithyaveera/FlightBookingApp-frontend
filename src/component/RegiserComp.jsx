@@ -48,8 +48,8 @@ const RegiserComp = () => {
     })
 
     return (
-        <div className='register-container'>
-            <div className='container ' >
+        <div className='register-container '>
+            <div className='container m-3' >
                 <div className='row pb-2 '>
                     <div className='col-md-10 mx-auto '>
                         <div className='row con mt-md-4'>
